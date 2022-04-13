@@ -1,9 +1,9 @@
 import React from "react";
 import deleted from './assets/deleted.png'
 import edited from './assets/edited.png'
+import Rating from "./star";
 import './comment.css';
 export default function Comment({ comment,handleDeleteC, handleEditC,}) {
-//   const [newName, setNewName, newMessage, setNewMessage] = React.useState(comment.name, comment.message);
   const [newMessage, setNewMessage] = React.useState(comment.message);
   const [newName, setNewName] = React.useState(comment.name);
     const handleChange = (e) =>{
@@ -31,6 +31,7 @@ export default function Comment({ comment,handleDeleteC, handleEditC,}) {
                 className="list"
                 onChange={handleChange}
                 />
+            <Rating/>
             <p className="com">  Comment</p>
             <textarea
                 style={{ textDecoration: comment.completed &&"line-through"}}
