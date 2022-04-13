@@ -1,155 +1,236 @@
-body {
-  background-color: #282c34;
-}
-
 .App {
   text-align: center;
-  max-width: 728px;
-  margin: 0 auto;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
-.App header {
-  background-color: #181717;
-  height: 10vh;
-  min-height: 50px;
-  color: white;
-  position: fixed;
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.navbar {
+  background: radial-gradient(ellipse at left bottom,
+      rgba(22, 24, 47, 1) 0%,
+      rgba(38, 20, 72, 0.9) 59%,
+      rgba(17, 27, 75, 0.9) 100%);
+  display: block;
   width: 100%;
-  max-width: 728px;
-  top: 0;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  z-index: 99;
-  padding: 10px;
-  box-sizing: border-box;
+  text-align: center;
+  height: 68px;
+  position:sticky;
+  top: 0.1px;
 }
 
-.App section {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  min-height: 100vh;
-  background-color: rgb(40, 37, 53);
+.navbar a {
+  padding: 23px 0px;
+  float: left;
+  font-size: 17px;
+  font-family: 'Apercu', sans-serif;
+  text-transform: uppercase;
+  font-weight: 300;
+  text-decoration: none;
+  color: #66FCF1;
+  margin: 0px;
 }
 
-main {
-  padding: 10px;
-  height: 80vh;
-  margin: 10vh 0 10vh;
-  overflow-y: scroll;
-  display: flex;
-  flex-direction: column;
+.navbar a:hover {
+  transition: opacity 0.13s ease-in;
+  opacity: 0.5;
 }
 
-main::-webkit-scrollbar {
-  width: 0.25rem;
+.navbar a.active {
+  color: #FFD700;
 }
 
-main::-webkit-scrollbar-track {
-  background: #1e1e24;
+.navbar a.active:hover {
+  transition: opacity 0.13s ease-in;
+  opacity: 0.5;
 }
 
-main::-webkit-scrollbar-thumb {
-  background: #6649b8;
-}
-
-form {
-  height: 10vh;
-  position: fixed;
-  bottom: 0;
-  background-color: rgb(24, 23, 23);
+.navbar_home {
+  display: block;
   width: 100%;
-  max-width: 728px;
-  display: flex;
-  font-size: 1.5rem;
+  text-align: center;
+  height: 68px;
+  position:sticky;
+  top: 0.1px;
 }
 
-form button {
-  width: 20%;
-  background-color: rgb(56, 56, 143);
+.navbar_home a {
+  padding: 23px 0px;
+  width: 23.3%;
+  float: left;
+  font-size: 17px;
+  font-family: 'Apercu', sans-serif;
+  text-transform: uppercase;
+  font-weight: 300;
+  text-decoration: none;
+  color: #66FCF1;
+  background: radial-gradient(ellipse at left bottom,
+      rgba(22, 24, 47, 1) 0%,
+      rgba(38, 20, 72, 0.9) 59%,
+      rgba(17, 27, 75, 0.9) 100%);
 }
 
+. f_home a:hover {
+  transition: opacity 0.13s ease-in;
+  opacity: 0.5;
+}
 
-input {
-  line-height: 1.5;
-  width: 100%;
-  font-size: 1.5rem;
-  background: rgb(58, 58, 58);
-  color: white;
-  outline: none;
-  border: none;
-  padding: 0 10px;
+.navbar_home a.active {
+  color: #FFD700;
+}
+
+.navbar_home a.active:hover {
+  transition: opacity 0.13s ease-in;
+  opacity: 0.5;
 }
 
 button {
-  background-color: #282c34; /* Green */
   border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
+  outline: none;
+  width: 100%;
+  padding: 15px 0;
+  color: #fff;
+  font-size: 16px;
+  letter-spacing: 1px;
+  background: #603bbb;
   cursor: pointer;
-  font-size: 1.25rem;
 }
 
-button:disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
+.login {
+  width: 100%;
+  min-height: 100vh;
+  padding: 0 20px;
+  background: #e9e9e9;
+  display: flex;
 }
 
-
-.sign-in {
-  color: #282c34;
-  background: white;
-  max-width: 400px;
-  margin: 0 auto;
+.login .loginContainer {
+  padding: 60px;
+  margin: auto;
+  width: 100%;
+  max-width: 520px;
+  min-height: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: radial-gradient(ellipse at left bottom,
+      rgba(22, 24, 47, 1) 0%,
+      rgba(38, 20, 72, 0.9) 59%,
+      rgba(17, 27, 75, 0.9) 100%);
+  box-shadow: 0 50px 70px -20px rgba(0, 0, 0, 0.8);
 }
 
-
-
-
-ul, li {
-  text-align: left;
-  list-style: none;
-}
-
-p {
-  max-width: 500px;
-  margin-bottom: 12px;
-  line-height: 24px;
-  padding: 10px 20px;
-  border-radius: 25px;
-  position: relative;
+.login .loginContainer label {
   color: white;
-  text-align: center;
+  margin: 14px 0;
+  display: block;
+  font-size: 22px;
+  line-height: 1;
 }
 
-.message {
+.login .loginContainer input {
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 19px;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+.login .loginContainer .btnContainer {
+  width: 100%;
+  padding: 24px 0;
+}
+
+.login .loginContainer .btnContainer p {
+  margin: 14px 0 0 0;
+  text-align: right;
+  color: #fff;
+}
+
+.login .loginContainer .btnContainer p span {
+  color: yellow;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  margin-left: 5px;
+  cursor: pointer;
+  transition: all 400ms ease-in-out;
+}
+
+.login .loginContainer .btnContainer p span:hover {
+  color: red;
+}
+
+.login .loginContainer .errorMsg {
+  color: red;
+  font-size: 16px;
+}
+
+.hero {
+  width: 100%;
+  min-height: 100vh;
+  background: radial-gradient(ellipse at left bottom,
+      rgba(22, 24, 47, 1) 0%,
+      rgba(38, 20, 72, 0.9) 59%,
+      rgba(17, 27, 75, 0.9) 100%);
+}
+
+.hero nav {
+  background: #603bbb;
+  width: 100%;
+  padding: 20px 40px;
   display: flex;
   align-items: center;
+  justify-content: space-between;
+}
+
+.hero nav h2 {
+  color: #fff;
+}
+
+.hero nav button {
+  width: 86px;
+  padding: 8px 0;
+  background: #3a2b58;
+}
+
+body {
+  margin: 0px;
 }
 
 
-.sent {
-  flex-direction: row-reverse;
-}
-
-.sent p {
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
   color: white;
-  background: #0b93f6;
-  align-self: flex-end;
-}
-.received p {
-  background: #e5e5ea;
-  color: black;
 }
 
-img {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  margin: 2px 5px;
+.App-link {
+  color: #61dafb;
 }
 
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
