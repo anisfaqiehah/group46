@@ -1,0 +1,120 @@
+* {
+ margin: 0; 
+ padding: 0;
+ box-sizing: border-box;
+ font-family: montserrat, sans-serif;   
+}
+
+input, button {
+    background-color: #7879FF;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.App{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #53565A;
+}
+
+form{
+    display: block;
+    position: relative;
+}
+
+form:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    z-index: 1;
+    background-image: linear-gradient(to bottom right, #4949FF, #7879FF);
+} 
+
+form .form-inner{
+    position: relative;
+    display: block;
+    background-color: white;
+    padding: 30px;
+    z-index: 2;
+}
+
+form .form-inner h2{
+    color: black;
+    font-size: 28px;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+
+form .form-inner .form-group {
+    display: block;
+    width: 300px;
+    margin-bottom: 15px;
+}
+
+.form-inner .form-group  label{
+    display: block;
+    color: rgb(6, 6, 6);
+    font-size: 12px;
+    margin-bottom: 5px;
+    transition: 0.4s;
+}
+
+.form-inner .form-group:focus-within label{
+    color: #7879FF;
+    font-size: 28px;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+
+form .form-inner .form-group{
+    display: block;
+    width: 300px;
+    margin-bottom: 15px;
+}
+
+.form-inner .form-group label{
+    display: block;
+    color: rgb(0, 0, 0);
+    font-size: 12px;
+    margin-bottom: 5px;
+    transition: 0.4s;
+}
+
+.form-group:focus-within label{
+    color: #7879FF;
+}
+
+form.form-inner .form-group input{
+    display: block;
+    width: 100%;
+    padding: 10px 15px;
+    background-color: white;
+    border-radius: 8px;
+    transition: 0.4s;
+}
+
+form.form-inner .form-group input[type = "submit"]{
+    display: inline-block;
+    padding: 10px 15px;
+    border-radius: 8px;
+    background-image: #7879FF;
+    background-size: 200%;
+    background-position: 0%;
+    transition: 0.4s;
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+}
