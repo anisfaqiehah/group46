@@ -1,0 +1,109 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.navbar {
+  background-color: #1a1a1d;
+  display: block;
+  width: 100%;
+  text-align: center;
+  height: 68px;
+  position:sticky;
+  top: 0.1px;
+}
+
+.navbar a {
+  padding: 23px 0px;
+  width: 12.5%;
+  float: left;
+  font-size: 17px;
+  font-family: 'Apercu', sans-serif;
+  text-transform: uppercase;
+  font-weight: 300;
+  text-decoration: none;
+  color: #66FCF1;
+}
+
+.navbar a:hover {
+  transition: opacity 0.13s ease-in;
+  opacity: 0.5;
+}
+
+.navbar a.active {
+  color: #FFD700;
+}
+
+.navbar a.active:hover {
+  transition: opacity 0.13s ease-in;
+  opacity: 0.5;
+}
+
+.navbar_home {
+  display: block;
+  width: 100%;
+  text-align: center;
+  height: 68px;
+  position:sticky;
+  top: 0.1px;
+}
+
+.navbar_home a {
+  padding: 23px 0px;
+  width: 12.5%;
+  float: left;
+  font-size: 17px;
+  font-family: 'Apercu', sans-serif;
+  text-transform: uppercase;
+  font-weight: 300;
+  text-decoration: none;
+  color: #66FCF1;
+}
+
+. f_home a:hover {
+  transition: opacity 0.13s ease-in;
+  opacity: 0.5;
+}
+
+.navbar_home a.active {
+  color: #FFD700;
+}
+
+.navbar_home a.active:hover {
+  transition: opacity 0.13s ease-in;
+  opacity: 0.5;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
