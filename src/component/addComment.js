@@ -1,6 +1,6 @@
-// import { addDoc } from "firebase/firestore";
 import React, { useState} from "react";
 import './comment.css';
+import Rating from "./star";
 import db from "../firebaseTodo";
 import { collection, addDoc } from "firebase/firestore";
 
@@ -30,7 +30,9 @@ function AddComment(){
         onChange={(e) => setName(e.target.value)}
         required 
       />
-
+      <label>
+        <Ratings/>    
+      </label>
       <label>Message</label>
       <textarea
         type="text"
