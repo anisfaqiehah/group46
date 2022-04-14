@@ -4,6 +4,7 @@ import AddTodo from "./addTodo";
 import Todo from "./handleTodo";
 import { collection,query,onSnapshot,doc,updateDoc,deleteDoc,} from "firebase/firestore";
 import db from "../firebaseTodo";
+import Appfeedback from './AppFeedback';
 
 function Apptodo() {
     const [todos, setTodos] = React.useState([]);
@@ -31,6 +32,7 @@ function Apptodo() {
       };
 
 return (
+    <div>
     <div className="AppToDo">
       <h1>checklists</h1>
       <AddTodo/>
@@ -45,6 +47,8 @@ return (
             />
           ))}
         </div>
+        </div>
+        <Appfeedback/>
     </div>
 
     );
